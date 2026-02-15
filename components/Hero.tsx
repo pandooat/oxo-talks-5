@@ -59,7 +59,7 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                         <div className="absolute -top-4 -right-4 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full z-20">Main Speaker</div>
                         <div className="relative h-72 bg-[#0B1120] border-2 border-amber-500/50 rounded-t-[6rem] rounded-b-xl overflow-hidden shadow-2xl">
                             <div className="w-full h-full bg-gradient-to-t from-slate-900 to-slate-800 flex items-end justify-center">
-                                <img src="https://i.imgur.com/Clt0wJe.png?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover opacity-90" alt="Kurnia Bijaksana" />
+                                <img src="https://i.imgur.com/9LvWxM0.png?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover opacity-90" alt="Kurnia Bijaksana" />
                             </div>
                             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent pt-8 pb-3 text-center">
                                 <p className="text-white text-lg font-bold">Kurnia Bijaksana</p>
