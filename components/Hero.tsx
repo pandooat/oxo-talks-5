@@ -59,12 +59,11 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                         <div className="absolute -top-4 -right-4 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full z-20">Main Speaker</div>
                         <div className="relative h-72 bg-[#0B1120] border-2 border-amber-500/50 rounded-t-[6rem] rounded-b-xl overflow-hidden shadow-2xl">
                             <div className="w-full h-full bg-gradient-to-t from-slate-900 to-slate-800 flex items-end justify-center">
-                                {/* Silhouette Placeholder */}
-                                <svg className="w-full h-full text-slate-600 opacity-50 absolute bottom-0" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover opacity-90" alt="Kurnia" />
                             </div>
                             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent pt-8 pb-3 text-center">
-                                <p className="text-white text-lg font-bold">Adrian</p>
-                                <p className="text-xs text-amber-500 uppercase tracking-wide">DeFi Researcher</p>
+                                <p className="text-white text-lg font-bold">Kurnia</p>
+                                <p className="text-xs text-amber-500 uppercase tracking-wide">Founder Volubit Academy</p>
                             </div>
                         </div>
                     </div>
