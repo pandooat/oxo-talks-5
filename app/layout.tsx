@@ -10,8 +10,25 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OXO Talks - Web3 Wealth Mastery",
-  description: "Jangan Cuma HODL—Kuasai Cara Trading Cerdas di Web3 dengan DEX Trading",
+  title: "Webinar OXO Talks: Web3 Wealth Mastery",
+  description: "Jangan Cuma HODL! Pelajari strategi trading cerdas di DEX (Decentralized Exchange) bersama pakar DeFi. Daftar GRATIS sekarang.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Webinar OXO Talks: Web3 Wealth Mastery",
+    description: "Bongkar rahasia trading di DEX tanpa ribet. Aman, transparan, dan profitable. Gabung komunitas eksklusif sekarang!",
+    url: "https://oxo5.vercel.app/",
+    siteName: "OXO Talks",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Webinar OXO Talks: Web3 Wealth Mastery",
+    description: "Jangan Cuma HODL! Pelajari strategi trading cerdas di DEX bersama pakar DeFi.",
+    creator: "@oxotalks",
+  },
 };
 
 export default function RootLayout({
