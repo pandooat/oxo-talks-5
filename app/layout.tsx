@@ -10,7 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Web3 Wealth Mastery - Registrasi Sekarang",
+  title: "OXO Talks - Web3 Wealth Mastery",
   description: "Jangan Cuma HODL—Kuasai Cara Trading Cerdas di Web3 dengan DEX Trading",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <head>
-          {/* Default Meta Pixel Code */}
+        {/* Default Meta Pixel Code */}
       </head>
       <body
         className={`${jakarta.variable} antialiased bg-[#020617] text-slate-50`}
@@ -43,8 +43,8 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-            <img height="1" width="1" style={{display:'none'}} 
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+          <img height="1" width="1" style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" />
         </noscript>
         {children}
       </body>

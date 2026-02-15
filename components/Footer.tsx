@@ -11,7 +11,7 @@ const Footer = () => {
                     <div>Privacy Protected</div>
                     <div>Support: +62 812-XXXX-XXXX</div>
                 </div>
-                <p>&copy; 2026 OXO Wealth Systems. All rights reserved.</p>
+                <p>&copy; 2026 OXO Talks. All rights reserved.</p>
             </div>
         </footer>
     );

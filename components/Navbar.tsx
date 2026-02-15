@@ -11,7 +11,7 @@ const Navbar = ({ seatsLeft, scrollToForm }: NavbarProps) => {
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded bg-gradient-to-br from-amber-300 to-amber-600 flex items-center justify-center text-black font-bold">O</div>
-                    <span className="text-xl font-bold tracking-tight text-white">OXO <span className="text-amber-500">WEALTH</span></span>
+                    <span className="text-xl font-bold tracking-tight text-white">OXO <span className="text-amber-500">TALKS</span></span>
                 </div>
                 <div className="hidden md:flex text-sm text-slate-400 gap-6 items-center">
                     <span className="text-amber-500 font-medium">🔥 {seatsLeft} Seat Tersisa</span>
