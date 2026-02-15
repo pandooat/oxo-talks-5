@@ -47,7 +47,7 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                     {/* Host */}
                     <div className="relative group w-48 mx-auto md:mx-0 order-2 md:order-1 opacity-80 hover:opacity-100 transition-opacity">
                         <div className="relative h-60 bg-[#0B1120] border border-slate-700 rounded-t-[5rem] rounded-b-xl overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover" alt="Monica" />
+                            <img src="https://i.imgur.com/Clt0wJe.png?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover" alt="Monica" />
                             <div className="absolute bottom-0 inset-x-0 bg-black/70 py-2 text-center">
                                 <p className="text-white text-xs font-bold">Monica</p>
                                 <p className="text-[10px] text-slate-400">CMO OXO</p>
@@ -59,10 +59,10 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                         <div className="absolute -top-4 -right-4 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full z-20">Main Speaker</div>
                         <div className="relative h-72 bg-[#0B1120] border-2 border-amber-500/50 rounded-t-[6rem] rounded-b-xl overflow-hidden shadow-2xl">
                             <div className="w-full h-full bg-gradient-to-t from-slate-900 to-slate-800 flex items-end justify-center">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover opacity-90" alt="Kurnia" />
+                                <img src="https://i.imgur.com/Clt0wJe.png?auto=format&fit=crop&w=400&q=80" className="w-full h-full object-cover opacity-90" alt="Kurnia Bijaksana" />
                             </div>
                             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent pt-8 pb-3 text-center">
-                                <p className="text-white text-lg font-bold">Kurnia</p>
+                                <p className="text-white text-lg font-bold">Kurnia Bijaksana</p>
                                 <p className="text-xs text-amber-500 uppercase tracking-wide">Founder Volubit Academy</p>
                             </div>
                         </div>
