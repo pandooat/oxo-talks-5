@@ -7,17 +7,19 @@ const SolutionSection = () => {
         <section className="relative z-10 py-20 container mx-auto px-6">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Dari "Penasaran" Jadi "Paham"
+                    🚀 Belajar Sistem Trading yang Benar di Era Web3
                 </h2>
-                <p className="text-slate-400 max-w-2xl mx-auto">Webinar yang benar-benar praktis. Bukan teori kuliah, tapi strategi jalanan.</p>
+                <p className="text-slate-400 max-w-2xl mx-auto">
+                    Kita tidak membahas "koin apa yang akan naik 100x". Kita membahas bagaimana kamu bisa bertahan dan profit dengan sistem, mindset, dan tools yang tepat.
+                </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                    { title: "Beginner-Friendly", desc: "Dijelaskan dari nol, tidak perlu background IT.", icon: "CheckCircle" },
-                    { title: "Real Case Study", desc: "Live demo pakai platform OXO (bukan teori abstrak).", icon: "TrendingUp" },
-                    { title: "Peluang 2026", desc: "Apa yang berbeda di tahun ini vs bull run sebelumnya.", icon: "Clock" },
-                    { title: "Safety First", desc: "Cara identify red flags dan protect asset kamu.", icon: "ShieldCheck" }
+                    { title: "Bukan Jualan Koin", desc: "Murni edukasi sistem trading, bukan pompa koin micin.", icon: "ShieldCheck" },
+                    { title: "Psikologi Trading", desc: "Cara mengontrol emosi agar tidak menjadi korban market maker.", icon: "TrendingUp" },
+                    { title: "Sistematis", desc: "Keputusan entry/exit berdasarkan data, bukan tebak-tebakan.", icon: "CheckCircle" },
+                    { title: "Kontrol Penuh", desc: "Menggunakan DEX untuk transparansi dan keamanan aset.", icon: "Lock" }
                 ].map((item, i) => (
                     <div key={i} className="bg-[#0B1120]/50 border border-amber-500/20 p-6 rounded-xl hover:bg-[#0B1120] transition-colors">
                         <Icon name={item.icon} className="text-amber-500 mb-4" size={32} />

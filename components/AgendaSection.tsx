@@ -11,16 +11,16 @@ const AgendaSection = () => {
 
                     <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                         <span className="bg-amber-500 text-black rounded px-2 py-1 text-sm">AGENDA</span>
-                        Yang Akan Kamu Bawa Pulang:
+                        📚 Di OXO TALKS Ini Kamu Akan Memahami:
                     </h3>
 
                     <ul className="space-y-6">
                         {[
-                            { title: "Blueprint Web3 Trading", desc: "Pahami evolusi dari CeFi ke DeFi dan kenapa DEX adalah masa depan." },
-                            { title: "DEX Decoded", desc: "Mekanisme liquidity pool, AMM, dan slippage explained sederhana." },
-                            { title: "Hands-On Demo", desc: "Step-by-step eksekusi trade pertama di DEX menggunakan OXO." },
-                            { title: "Profit & Risk Framework", desc: "Cara calculate impermanent loss vs potential gain yang realistis." },
-                            { title: "2026 Market Insights", desc: "Update terkini tentang regulasi dan opportunity di Indonesia." }
+                            { title: "The Retail Trap", desc: "Kenapa trader retail sering rugi: Psikologi crowd behavior & FOMO." },
+                            { title: "Emotional Trading Exposing", desc: "Identifikasi trigger emosional dan cara install 'circuit breaker'." },
+                            { title: "DEX as Discipline Tool", desc: "Bagaimana transparansi blockchain memaksa kehati-hatian." },
+                            { title: "Practical Execution", desc: "Demo setup wallet, connect DEX, dan eksekusi trade aman." },
+                            { title: "Real Case Study", desc: "Analisis skenario nyata: dari perencanaan sampai eksekusi." }
                         ].map((item, idx) => (
                             <li key={idx} className="flex gap-4 items-start group">
                                 <div className="mt-1 min-w-[24px] text-amber-500">
@@ -37,7 +37,7 @@ const AgendaSection = () => {
                     <div className="mt-10 p-4 bg-amber-900/20 border border-amber-500/30 rounded-lg flex items-center gap-4">
                         <div className="p-2 bg-amber-500 rounded text-black font-bold text-xs shadow-lg">BONUS</div>
                         <p className="text-amber-200 text-sm font-medium">
-                            E-book "DEX Starter Checklist" (Senilai Rp299rb) untuk yang daftar sebelum 19 Feb.
+                            Checklist "Emotional Trading Audit" untuk 50 pendaftar pertama.
                         </p>
                     </div>
                 </div>

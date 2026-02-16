@@ -17,16 +17,16 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                     </span>
-                    <span className="text-amber-400 text-xs font-bold uppercase tracking-widest">Webinar Gratis 90 Menit</span>
+                    <span className="text-amber-400 text-xs font-bold uppercase tracking-widest">28 Feb 2026 | 19.30 WIB | Google Meet</span>
                 </div>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight max-w-5xl mx-auto">
-                Jangan Cuma HODL—Kuasai Cara <span className="text-gold-gradient">Trading Cerdas di Web3</span> dengan DEX Trading
+                💡 Bukan Soal Koinnya, tapi <span className="text-gold-gradient">Cara Mainnya</span>
             </h1>
 
             <p className="text-base md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-                Bongkar cara kerja <span className="text-white font-medium">Decentralized Exchange (DEX)</span> yang sedang menggemparkan dunia kripto—dari dasar hingga strategi praktis menggunakan platform OXO. Tanpa perlu modal besar atau takut kena scam.
+                Kebanyakan orang mengira rugi di crypto karena salah pilih coin. Padahal seringnya karena: <strong className="text-white">salah sistem, salah mindset, dan salah tempat trading.</strong>
             </p>
 
             <div className="flex flex-col items-center gap-4 mb-16">
@@ -34,7 +34,7 @@ const Hero = ({ seatsLeft, scrollToForm }: HeroProps) => {
                     onClick={scrollToForm}
                     className="w-full md:w-auto bg-gradient-to-r from-amber-400 to-amber-600 text-black text-lg font-bold px-8 py-4 rounded-xl shadow-[0_0_30px_rgba(245,158,11,0.4)] btn-gold-pulse transition-transform transform hover:-translate-y-1 cursor-pointer"
                 >
-                    Saya Mau Ikut! Gratis – Daftar Sekarang
+                    Daftar Gratis - OXO TALKS
                 </button>
                 <p className="text-sm text-amber-500 font-mono bg-amber-900/20 px-3 py-1 rounded border border-amber-500/20">
                     ⚠️ Hanya 100 Seat – Sisa {seatsLeft}

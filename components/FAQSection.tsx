@@ -7,10 +7,9 @@ const FAQSection = () => {
                 <h3 className="text-2xl font-bold text-center text-white mb-8">Pertanyaan Umum</h3>
                 <div className="space-y-4">
                     {[
-                        { q: "Saya masih baru banget di crypto, apakah terlalu advanced?", a: "Justru ini untuk kamu! Kita mulai dari bedain CEX vs DEX, jadi nanti nggak gaptek lagi ngobrol sama trader senior." },
-                        { q: "Apakah perlu instal wallet dulu sebelum webinar?", a: "Tidak perlu. Kita akan demo pakai screen sharing. Tapi kalau mau praktik bareng, nanti kami kasih panduan setup wallet setelah registrasi." },
-                        { q: "Gratisannya beneran gratis atau ada hidden fee?", a: "100% gratis, tanpa syarat membeli token apapun. OXO hanya sebagai contoh platform yang user-friendly." },
-                        { q: "Saya sibuk kerja, apakah ada replay?", a: "Replay tersedia 24 jam untuk yang registrasi, tapi Q&A session hanya untuk yang live. Plus, bonus e-book hanya untuk yang hadir live." }
+                        { q: "Saya masih pemula, apakah ini terlalu advanced?", a: "Justru untuk pemula agar tidak terjebak kebiasaan buruk sejak awal. Kita bahas dari mindset, bukan technical analysis rumit." },
+                        { q: "Apakah ini seminar jualan OXO token?", a: "Tidak. OXO TALKS fokus edukasi sistem trading. OXO digunakan sebagai contoh platform DEX yang user-friendly saja." },
+                        { q: "Saya sibuk, apakah ada recording?", a: "Ada replay 24 jam, tapi sesi tanya-jawab dan bonus hanya untuk yang hadir live." }
                     ].map((item, i) => (
                         <details key={i} className="group bg-[#0B1120] border border-slate-800 rounded-lg p-4 cursor-pointer open:border-amber-500/50 open:bg-slate-900 transition-all">
                             <summary className="font-semibold text-white flex justify-between items-center list-none text-sm md:text-base">
