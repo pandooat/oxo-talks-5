@@ -16,19 +16,18 @@ const AgendaSection = () => {
 
                     <ul className="space-y-6">
                         {[
-                            { title: "The Retail Trap", desc: "Kenapa trader retail sering rugi: Psikologi crowd behavior & FOMO." },
-                            { title: "Emotional Trading Exposing", desc: "Identifikasi trigger emosional dan cara install 'circuit breaker'." },
-                            { title: "DEX as Discipline Tool", desc: "Bagaimana transparansi blockchain memaksa kehati-hatian." },
-                            { title: "Practical Execution", desc: "Demo setup wallet, connect DEX, dan eksekusi trade aman." },
-                            { title: "Real Case Study", desc: "Analisis skenario nyata: dari perencanaan sampai eksekusi." }
+                            "Kenapa trader retail sering jadi korban market",
+                            "Bagaimana emosi mempengaruhi keputusan entry & exit",
+                            "Peran DEX dalam mengurangi keputusan impulsif",
+                            "Cara trading langsung dari wallet pribadi",
+                            "Studi kasus penggunaan DEX"
                         ].map((item, idx) => (
                             <li key={idx} className="flex gap-4 items-start group">
                                 <div className="mt-1 min-w-[24px] text-amber-500">
                                     <Icon name="CheckCircle" size={24} className="fill-amber-500/10" />
                                 </div>
-                                <div>
-                                    <span className="text-white font-bold block group-hover:text-amber-400 transition-colors">{item.title}</span>
-                                    <span className="text-slate-400 text-sm">{item.desc}</span>
+                                <div className="flex-1">
+                                    <span className="text-white font-bold block group-hover:text-amber-400 transition-colors text-base md:text-lg">{item}</span>
                                 </div>
                             </li>
                         ))}
