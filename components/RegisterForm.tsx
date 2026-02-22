@@ -23,6 +23,22 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
         const formEle = e.currentTarget;
         const formData = new FormData(formEle);
 
+        // --- META PIXEL EVENT TRACKING START ---
+        // Trigger Event segera saat klik (sebelum fetch) untuk reliability
+        // @ts-expect-error fbq is injected via script
+        if (typeof window !== 'undefined' && window.fbq) {
+            // @ts-expect-error fbq is injected via script
+            window.fbq('track', 'CompleteRegistration', {
+                content_name: 'Webinar Web3 Registration',
+                currency: 'IDR',
+                value: 0
+            });
+            console.log("[DEBUG] Meta Pixel: CompleteRegistration event fired (Early Trigger)");
+        } else {
+            console.warn("[DEBUG] Meta Pixel: fbq not found on window");
+        }
+        // --- META PIXEL EVENT TRACKING END ---
+
         // Add detailed timestamp
         const now = new Date();
         const date = now.getDate().toString().padStart(2, '0');
@@ -45,29 +61,14 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
             });
 
             // --- META PIXEL EVENT TRACKING START ---
-            // Trigger Event 'CompleteRegistration' saat sukses submit
-            // @ts-expect-error fbq is injected via script
-            if (window.fbq) {
-                // @ts-expect-error fbq is injected via script
-                window.fbq('track', 'CompleteRegistration', {
-                    content_name: 'Webinar Web3 Registration',
-                    currency: 'IDR',
-                    value: 0 // Nilai konversi (0 karena gratis)
-                });
-                console.log("Facebook Pixel Event Fired: CompleteRegistration");
-            }
+            // Trigger Event 'CompleteRegistration' saat sukses submit (pindah ke atas)
             // --- META PIXEL EVENT TRACKING END ---
 
             formEle.reset();
             setShowSuccessModal(true);
         } catch (error) {
             console.error("Error!", error);
-            // Tetap fire pixel jika kita yakin user submit (walau ada network error minor)
-            // @ts-expect-error fbq is injected via script
-            if (window.fbq) {
-                // @ts-expect-error fbq is injected via script
-                window.fbq('track', 'CompleteRegistration');
-            }
+            // Event sudah dipicu di awal submit
             setShowSuccessModal(true);
         } finally {
             setIsSubmitting(false);

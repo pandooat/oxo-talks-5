@@ -57,6 +57,7 @@ export default function RootLayout({
             
             fbq('init', '1568595487766842'); 
             fbq('track', 'PageView');
+            console.log("[DEBUG] Meta Pixel Initialized with PageView");
           `}
         </Script>
         <noscript>
