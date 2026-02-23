@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Webinar OXO Talks: Web3 Wealth Mastery",
   description: "Jangan Cuma HODL! Pelajari strategi trading cerdas di DEX (Decentralized Exchange) bersama pakar DeFi. Daftar GRATIS sekarang.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
   },
   openGraph: {
     title: "Webinar OXO Talks: Web3 Wealth Mastery",

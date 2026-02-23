@@ -74,17 +74,17 @@ export default async function Image() {
                             width: '40px',
                             height: '40px',
                             borderRadius: '8px',
-                            background: 'linear-gradient(135deg, #fcd34d 0%, #d97706 100%)',
+                            background: 'linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            color: 'black',
+                            color: 'white',
                             fontWeight: 'bold',
                             fontSize: '24px',
                             marginRight: '15px',
                         }}
                     >
-                        O
+                        X
                     </div>
                     <span style={{ fontSize: '24px', fontWeight: 'bold', letterSpacing: '2px' }}>OXO TALKS</span>
                 </div>
