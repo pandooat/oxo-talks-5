@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -19,14 +19,14 @@ body {
 }
 
 /* Custom Utilities */
-.text-gold-gradient {
-  background: linear-gradient(to bottom, #FDE68A, #D97706);
+.text-crypto-gradient {
+  background: linear-gradient(to right, #7c3aed, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-circuit {
-  background-image: radial-gradient(#D97706 1px, transparent 1px);
+  background-image: radial-gradient(#94a3b8 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.15;
 }
@@ -35,13 +35,13 @@ body {
   border-radius: 10rem 10rem 1rem 1rem;
 }
 
-@keyframes gold-pulse {
-  0%, 100% { box-shadow: 0 0 15px rgba(217, 119, 6, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(217, 119, 6, 0.6); }
+@keyframes crypto-pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.6); }
 }
 
-.btn-gold-pulse {
-  animation: gold-pulse 2s infinite;
+.btn-crypto-pulse {
+  animation: crypto-pulse 2s infinite;
 }
 
 @keyframes spin {

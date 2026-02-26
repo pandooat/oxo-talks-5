@@ -87,8 +87,8 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
                         <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                             <Icon name="CheckCircle" size={32} className="text-green-500" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Pendaftaran Berhasil!</h3>
-                        <p className="text-amber-500 font-bold text-lg mb-4">⚠️ 1 Langkah Lagi</p>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Pendaftaran Berhasil!</h3>
+                        <p className="text-purple-600 font-bold text-lg mb-4">⚠️ 1 Langkah Lagi</p>
                         <p className="text-slate-300 text-sm mb-8 leading-relaxed">
                             Wajib bergabung ke grup WhatsApp untuk mendapatkan link Zoom, materi, dan update jadwal webinar.
                         </p>
@@ -103,37 +103,37 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
                 </div>
             )}
 
-            <div className="bg-[#0B1120] rounded-2xl p-6 md:p-8 w-full border border-amber-500/50 shadow-[0_0_60px_rgba(217,119,6,0.15)] relative h-full flex flex-col justify-center text-left">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-full shadow-lg z-10 whitespace-nowrap">
+            <div className="bg-white rounded-2xl p-6 md:p-8 w-full border border-slate-200 shadow-[0_10px_40px_rgba(59,130,246,0.1)] relative h-full flex flex-col justify-center text-left">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white text-[10px] font-bold px-4 py-1 rounded-full shadow-lg z-10 whitespace-nowrap">
                     🔥 Tersisa {seatsLeft} Slot Hari Ini
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">Formulir Pendaftaran</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">Form Pendaftaran (Gratis)</h3>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
 
                     {/* 1. Nama Lengkap */}
                     <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-amber-500 uppercase tracking-wider pl-1">Nama Lengkap</label>
-                        <input name="Nama" type="text" className="w-full bg-[#020617] border border-slate-700 focus:border-amber-500 rounded-lg px-4 py-3 text-white outline-none transition-all placeholder:text-slate-600 text-sm" placeholder="John Doe" required />
+                        <label className="text-[10px] font-bold text-purple-600 uppercase tracking-wider pl-1">Nama Lengkap</label>
+                        <input name="Nama" type="text" className="w-full bg-slate-50 border border-slate-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 text-sm" placeholder="John Doe" required />
                     </div>
 
                     {/* 2. Email */}
                     <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-amber-500 uppercase tracking-wider pl-1">Email</label>
-                        <input name="Email" type="email" className="w-full bg-[#020617] border border-slate-700 focus:border-amber-500 rounded-lg px-4 py-3 text-white outline-none transition-all placeholder:text-slate-600 text-sm" placeholder="email@domain.com" required />
+                        <label className="text-[10px] font-bold text-purple-600 uppercase tracking-wider pl-1">Email Aktif</label>
+                        <input name="Email" type="email" className="w-full bg-slate-50 border border-slate-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 text-sm" placeholder="email@domain.com" required />
                     </div>
 
                     {/* 3. WhatsApp */}
                     <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-amber-500 uppercase tracking-wider pl-1">Nomor WhatsApp</label>
-                        <input name="Whatsapp" type="tel" className="w-full bg-[#020617] border border-slate-700 focus:border-amber-500 rounded-lg px-4 py-3 text-white outline-none transition-all placeholder:text-slate-600 text-sm" placeholder="0812xxxx" required />
+                        <label className="text-[10px] font-bold text-purple-600 uppercase tracking-wider pl-1">Nomor WhatsApp</label>
+                        <input name="Whatsapp" type="tel" className="w-full bg-slate-50 border border-slate-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 text-slate-900 outline-none transition-all placeholder:text-slate-400 text-sm" placeholder="0812xxxx" required />
                     </div>
 
                     {/* 4. Tahu Darimana (New Field) */}
                     <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-amber-500 uppercase tracking-wider pl-1">Info Dari Mana?</label>
-                        <select name="Sumber" className="w-full bg-[#020617] border border-slate-700 focus:border-amber-500 rounded-lg px-4 py-3 text-white outline-none transition-all placeholder:text-slate-600 appearance-none cursor-pointer text-sm" required defaultValue="">
+                        <label className="text-[10px] font-bold text-purple-600 uppercase tracking-wider pl-1">Dapat Info Dari Mana? (Opsional)</label>
+                        <select name="Sumber" className="w-full bg-slate-50 border border-slate-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 rounded-lg px-4 py-3 text-slate-900 outline-none transition-all appearance-none cursor-pointer text-sm" defaultValue="">
                             <option value="" disabled className="text-slate-500">Pilih salah satu...</option>
                             <option value="instagram">Instagram Ads / Post</option>
                             <option value="telegram">Komunitas Telegram</option>
@@ -145,23 +145,27 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
 
                     <div className="flex items-start gap-2 pt-2 pb-2">
                         <input type="checkbox" className="mt-1" required />
-                        <p className="text-[10px] text-slate-500 leading-tight">Saya setuju untuk bergabung ke grup komunitas eksklusif dan menerima info webinar.</p>
+                        <p className="text-[10px] text-slate-600 leading-tight">Saya setuju menerima info webinar dan link akses via WhatsApp/Email.</p>
                     </div>
 
-                    <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-bold py-4 rounded-xl shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-1 uppercase tracking-wide flex justify-center items-center gap-2 btn-gold-pulse disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer">
+
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all transform hover:-translate-y-1 uppercase tracking-wide flex justify-center items-center gap-2 btn-crypto-pulse disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer">
                         {isSubmitting ? (
                             <div className="loader"></div>
                         ) : (
                             <>
-                                <Icon name="Zap" size={18} className="fill-black" />
-                                Daftar Sekarang - Gratis
+                                <Icon name="Zap" size={18} className="fill-white" />
+                                Kirim & Amankan Seat
                             </>
                         )}
                     </button>
+                    <p className="text-[10px] text-slate-500 text-center leading-tight mt-2">
+                        Data kamu hanya dipakai untuk kebutuhan webinar (link akses, reminder, materi). Unsubscribe kapan saja.
+                    </p>
                 </form>
-                <div className="mt-4 flex items-center justify-center gap-2 text-[10px] text-slate-600">
-                    <Icon name="Lock" size={10} />
-                    <span>Data Terenkripsi 256-bit SSL</span>
+                <div className="mt-4 flex items-center justify-center gap-2 text-[10px] text-slate-500 bg-slate-50 py-1.5 rounded-full border border-slate-100">
+                    <Icon name="Lock" size={12} className="text-green-500" />
+                    <span className="font-medium text-slate-600">SSL Secure &middot; Privacy Protected</span>
                 </div>
             </div>
         </div>

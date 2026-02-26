@@ -4,34 +4,49 @@ import Icon from "./Icon";
 
 const ProofSection = () => {
     return (
-        <section className="relative z-10 py-16 text-center container mx-auto px-6">
-            <div className="inline-flex items-center gap-2 mb-12 bg-slate-800 px-4 py-2 rounded-full border border-slate-700">
-                <Icon name="Users" size={16} className="text-amber-500" />
-                <span className="text-slate-300 text-sm">Sudah diikuti <strong className="text-white">500+ traders</strong> dari komunitas Crypto Indo</span>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div className="bg-[#0B1120] border border-slate-800 p-6 rounded-xl text-left">
-                    <div className="flex text-amber-500 mb-3">★★★★★</div>
-                    <p className="text-slate-300 text-sm mb-4">"Akhirnya paham kenapa gas fee bisa mahal dan cara minimize-nya. Demo pakai OXO-nya super jelas!"</p>
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-700"></div>
+        <section className="relative z-10 py-24 text-center container mx-auto px-6 border-b border-slate-200">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                {/* Testimonial 1 */}
+                <div className="bg-white border border-slate-200 shadow-xl shadow-slate-200/50 p-8 rounded-2xl text-left hover:border-purple-300 transition-colors">
+                    <div className="flex text-amber-400 mb-4 text-xl">★★★★★</div>
+                    <p className="text-slate-700 text-base md:text-lg mb-6 italic leading-relaxed">
+                        “Sebagai pemula, sesi ini bikin aku pede coba DEX pertama kali. Bahasanya jelas dan nggak bikin pusing.”
+                    </p>
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-200 to-blue-200 flex items-center justify-center font-bold text-slate-700">S</div>
                         <div>
-                            <p className="text-white text-xs font-bold">Andi, 28</p>
-                            <p className="text-slate-500 text-[10px]">Swasta</p>
+                            <p className="text-slate-900 text-sm font-bold">Sarah, 23</p>
+                            <p className="text-slate-500 text-xs">Freelance</p>
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#0B1120] border border-slate-800 p-6 rounded-xl text-left">
-                    <div className="flex text-amber-500 mb-3">★★★★★</div>
-                    <p className="text-slate-300 text-sm mb-4">"Sebagai pemula, webinar ini ngasih confidence untuk coba DEX pertama kali. Bahasanya nggak bikin pusing."</p>
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-700"></div>
+
+                {/* Testimonial 2 */}
+                <div className="bg-white border border-slate-200 shadow-xl shadow-slate-200/50 p-8 rounded-2xl text-left hover:border-purple-300 transition-colors">
+                    <div className="flex text-amber-400 mb-4 text-xl">★★★★★</div>
+                    <p className="text-slate-700 text-base md:text-lg mb-6 italic leading-relaxed">
+                        “Aku akhirnya paham kenapa eksekusiku sering kacau. Setelah punya aturan entry–exit, trading jadi lebih tenang.”
+                    </p>
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-200 to-cyan-200 flex items-center justify-center font-bold text-slate-700">A</div>
                         <div>
-                            <p className="text-white text-xs font-bold">Sarah, 23</p>
-                            <p className="text-slate-500 text-[10px]">Freelance</p>
+                            <p className="text-slate-900 text-sm font-bold">Andi, 28</p>
+                            <p className="text-slate-500 text-xs">Swasta</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* Quote Speaker */}
+            <div className="max-w-3xl mx-auto bg-slate-900 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-2xl">
+                <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center shrink-0">
+                    <Icon name="Quote" size={24} className="text-white" />
+                </div>
+                <div className="text-center md:text-left">
+                    <p className="text-white text-lg md:text-xl font-medium italic mb-2">
+                        “Banyak yang salahnya bukan di koin—tapi di timing dan emosi saat eksekusi.”
+                    </p>
+                    <p className="text-amber-500 font-bold text-sm">— OXO Talks Speaker</p>
                 </div>
             </div>
         </section>
