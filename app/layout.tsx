@@ -42,24 +42,27 @@ export default function RootLayout({
         {/* Default Meta Pixel Code */}
       </head>
       <body
-        className={`${jakarta.variable} antialiased bg-[#020617] text-slate-50`}
+        className={`${jakarta.variable} antialiased bg-slate-50 text-slate-900`}
       >
-        <Script id="facebook-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            
-            fbq('init', '1568595487766842'); 
-            fbq('track', 'PageView');
-            console.log("[DEBUG] Meta Pixel Initialized with PageView");
-          `}
-        </Script>
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1568595487766842');
+              fbq('track', 'PageView');
+              console.log("[DEBUG] Meta Pixel Initialized with PageView");
+            `,
+          }}
+        />
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=1568595487766842&ev=PageView&noscript=1" />
