@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
+import { v4 as uuidv4 } from 'uuid';
 
 interface RegisterFormProps {
     seatsLeft: number;
@@ -23,7 +24,22 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
         const formEle = e.currentTarget;
         const formData = new FormData(formEle);
 
-        // --- META PIXEL EVENT TRACKING START ---
+        // Helper untuk mengambil cookie FB jika ada
+        const getCookie = (name: string) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop()?.split(';').shift();
+            return undefined;
+        };
+
+        // Extraction data
+        const email = formData.get("Email")?.toString() || '';
+        const whatsapp = formData.get("Whatsapp")?.toString() || '';
+
+        // 1. Buat ID unik untuk deduplikasi
+        const eventId = uuidv4();
+
+        // 2. META PIXEL EVENT TRACKING (Browser-side)
         // Trigger Event segera saat klik (sebelum fetch) untuk reliability
         // @ts-expect-error fbq is injected via script
         if (typeof window !== 'undefined' && window.fbq) {
@@ -32,12 +48,11 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
                 content_name: 'Webinar Web3 Registration',
                 currency: 'IDR',
                 value: 0
-            });
-            console.log("[DEBUG] Meta Pixel: CompleteRegistration event fired (Early Trigger)");
+            }, { eventID: eventId });
+            console.log("[DEBUG] Meta Pixel: CompleteRegistration event fired with ID:", eventId);
         } else {
             console.warn("[DEBUG] Meta Pixel: fbq not found on window");
         }
-        // --- META PIXEL EVENT TRACKING END ---
 
         // Add detailed timestamp
         const now = new Date();
@@ -51,18 +66,31 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
 
         formData.append('Timestamp', formattedDate);
 
-        // Mengambil nilai email untuk dikirim ke Pixel (opsional untuk Advanced Matching)
-        // const userEmail = formData.get("Email");
-
         try {
-            await fetch(GOOGLE_SCRIPT_URL, {
+            // 3. Kirim data ke Serverless API kita (Server-side/CAPI)
+            const capiPromise = fetch('/api/capi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    eventName: 'CompleteRegistration',
+                    eventId: eventId, // ID INI HARUS SAMA DENGAN ID DI ATAS
+                    email: email,
+                    phone: whatsapp,
+                    url: window.location.href,
+                    userAgent: navigator.userAgent,
+                    fbp: getCookie('_fbp'),
+                    fbc: getCookie('_fbc')
+                })
+            }).catch(err => console.error("CAPI Fetch Error:", err)); // Prevent failing main form submission
+
+            // Google Script Submission
+            const gScriptPromise = fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
                 body: formData
             });
 
-            // --- META PIXEL EVENT TRACKING START ---
-            // Trigger Event 'CompleteRegistration' saat sukses submit (pindah ke atas)
-            // --- META PIXEL EVENT TRACKING END ---
+            // Wait for both
+            await Promise.all([gScriptPromise, capiPromise]);
 
             formEle.reset();
             setShowSuccessModal(true);
