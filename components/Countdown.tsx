@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Countdown = () => {
     const calculateTimeLeft = () => {
-        const targetDate = new Date("2026-02-28T19:30:00").getTime();
+        const targetDate = new Date("2026-02-28T20:30:00").getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
 
@@ -36,8 +36,8 @@ const Countdown = () => {
         <div className="flex gap-2 md:gap-4 justify-start py-4">
             {Object.keys(timeLeft).map((interval) => (
                 <div key={interval} className="text-center">
-                    <div className="bg-[#020617] border border-amber-500/30 w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center mb-1 shadow-inner shadow-black/50">
-                        <span className="text-xl md:text-2xl font-bold text-white">
+                    <div className="bg-white border border-slate-200 w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center mb-1 shadow-sm">
+                        <span className="text-xl md:text-2xl font-bold text-purple-600">
                             {timeLeft[interval] < 10 ? `0${timeLeft[interval]}` : timeLeft[interval]}
                         </span>
                     </div>

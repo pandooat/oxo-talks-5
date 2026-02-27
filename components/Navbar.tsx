@@ -11,7 +11,7 @@ const Navbar = ({ seatsLeft, scrollToForm }: NavbarProps) => {
             {/* Announcement Bar */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs md:text-sm font-medium py-2 px-4 text-center">
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-2">
-                    <span>📅 28 Feb 2026 • ⏰ 19.30 WIB • 📍 Google Meet</span>
+                    <span>📅 28 Feb 2026 • ⏰ 20.30 WIB • 📍 Google Meet</span>
                     <span className="hidden md:inline">|</span>
                     <span className="text-white/80">Link dikirim via WhatsApp + Email</span>
                 </div>
