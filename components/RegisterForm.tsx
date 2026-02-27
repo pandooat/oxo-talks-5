@@ -118,7 +118,7 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Pendaftaran Berhasil!</h3>
                         <p className="text-purple-600 font-bold text-lg mb-4">⚠️ 1 Langkah Lagi</p>
                         <p className="text-slate-300 text-sm mb-8 leading-relaxed">
-                            Wajib bergabung ke grup WhatsApp untuk mendapatkan link Zoom, materi, dan update jadwal webinar.
+                            Wajib bergabung ke grup WhatsApp untuk mendapatkan link Google Meet, materi, dan update jadwal webinar.
                         </p>
                         <button
                             onClick={handleWhatsAppRedirect}

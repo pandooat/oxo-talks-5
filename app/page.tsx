@@ -77,7 +77,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="bg-blue-100 p-1.5 rounded-full text-blue-600"><Icon name="CheckCircle" size={16} /></div>
-                  <p className="text-slate-700 text-sm font-medium">Link Zoom dikirim via WhatsApp</p>
+                  <p className="text-slate-700 text-sm font-medium">Link Google Meet dikirim via WhatsApp</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="bg-blue-100 p-1.5 rounded-full text-blue-600"><Icon name="CheckCircle" size={16} /></div>
