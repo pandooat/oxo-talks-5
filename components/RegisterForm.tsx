@@ -110,14 +110,14 @@ const RegisterForm = ({ seatsLeft }: RegisterFormProps) => {
     return (
         <div className="relative h-full">
             {showSuccessModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300">
-                    <div className="bg-[#0B1120] border border-amber-500/50 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl transform scale-100 animate-in zoom-in-95 duration-300 relative">
-                        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <Icon name="CheckCircle" size={32} className="text-green-500" />
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-in fade-in duration-300">
+                    <div className="bg-white border border-slate-200 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl transform scale-100 animate-in zoom-in-95 duration-300 relative">
+                        <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <Icon name="CheckCircle" size={32} className="text-green-600" />
                         </div>
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Pendaftaran Berhasil!</h3>
                         <p className="text-purple-600 font-bold text-lg mb-4">⚠️ 1 Langkah Lagi</p>
-                        <p className="text-slate-300 text-sm mb-8 leading-relaxed">
+                        <p className="text-slate-600 text-sm mb-8 leading-relaxed">
                             Wajib bergabung ke grup WhatsApp untuk mendapatkan link Google Meet, materi, dan update jadwal webinar.
                         </p>
                         <button
