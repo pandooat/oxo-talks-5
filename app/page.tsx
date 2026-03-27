@@ -181,13 +181,13 @@ const Page = () => {
               <div className="text-base">Save My Seat</div>
             </div>
           </a>
-          <a href="https://discord.gg/wC8Fns8zVc" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-[#13141C] border border-white/10 hover:border-[#5865F2] hover:bg-[#5865F2]/10 transition-all duration-300 flex items-center justify-center gap-3">
+          <div className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-[#13141C] border border-white/10 transition-all duration-300 flex items-center justify-center gap-3 cursor-default">
             <Discord className="w-5 h-5 text-[#5865F2]" />
             <div className="text-left leading-tight">
               <div className="text-[10px] text-gray-400 uppercase tracking-wider">Live Venue</div>
               <div className="text-base">Discord BASE</div>
             </div>
-          </a>
+          </div>
         </motion.div>
 
         {/* TRUST BAR */}
